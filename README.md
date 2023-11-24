@@ -43,4 +43,9 @@ If you use this work in your research, please cite it using the following BibTeX
   year={2023},
   publisher={...}
 }
+```
+
+## Contact
+
+For any further inquiries, you can reach me at asalrayzah@gmail.com
 
