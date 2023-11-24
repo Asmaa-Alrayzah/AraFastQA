@@ -30,8 +30,10 @@ Download the Arabic QA benchmark datasets (TyDi QA and ARCD) from the following 
 `!gdown --id 1-7jj89-HEFu5DIMV9J8mBSKyBvmC-P6U –folder`
 
 ## Citation
-If you find this work helpful, please cite us. <br>
-@article{...,
+If you use this work in your research, please cite it using the following BibTeX entry:
+
+```bibtex
+@article{YourLastName2023,
   title={...},
   author={...},
   journal={...},
@@ -42,6 +44,3 @@ If you find this work helpful, please cite us. <br>
   publisher={...}
 }
 
-
-## Contact
-For any further inquiries, you can reach me at asalrayzah@gmail.com 
