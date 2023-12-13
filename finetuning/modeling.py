@@ -4,7 +4,7 @@ from torch.nn import Module, Linear, LayerNorm, CrossEntropyLoss
 from torch.nn.parameter import Parameter
 
 from transformers import BertPreTrainedModel, BertModel, RobertaModel
-from transformers.modeling_bert import BertLMPredictionHead, ACT2FN
+from transformers.modeling_bert import BertLMPredictionHead ,ACT2FN
 
 
 def gather_positions(input_tensor, positions):
@@ -15,7 +15,8 @@ def gather_positions(input_tensor, positions):
     """
     _, _, dim = input_tensor.size()
     index = positions.unsqueeze(-1).repeat(1, 1, dim)  # [batch_size, num_positions, dim]
-    gathered_output = torch.gather(input_tensor, dim=1, index=index)  # [batch_size, num_positions, dim]
+    # [batch_size, num_positions, dim]
+    gathered_output = torch.gather(input_tensor, dim=1, index=index)
     return gathered_output
 
 
@@ -52,12 +53,14 @@ class QuestionAwareSpanSelectionHead(Module):
     def forward(self, inputs, positions):
         gathered_reps = gather_positions(inputs, positions)
 
-        query_start_reps = self.query_start_transform(gathered_reps)  # [batch_size, num_positions, dim]
+        query_start_reps = self.query_start_transform(
+            gathered_reps)  # [batch_size, num_positions, dim]
         query_end_reps = self.query_end_transform(gathered_reps)  # [batch_size, num_positions, dim]
         start_reps = self.start_transform(inputs)  # [batch_size, seq_length, dim]
         end_reps = self.end_transform(inputs)  # [batch_size, seq_length, dim]
 
-        temp = torch.matmul(query_start_reps, self.start_classifier)  # [batch_size, num_positions, dim]
+        # [batch_size, num_positions, dim]
+        temp = torch.matmul(query_start_reps, self.start_classifier)
         start_reps = start_reps.permute(0, 2, 1)  # [batch_size, dim, seq_length]
         start_logits = torch.matmul(temp, start_reps)
 
@@ -116,7 +119,8 @@ class ModelWithQASSHead(BertPreTrainedModel):
 
         mask_positions_were_none = False
         if masked_positions is None:
-            masked_position_for_each_example = torch.argmax((input_ids == self.question_token_id).int(), dim=-1)
+            masked_position_for_each_example = torch.argmax(
+                (input_ids == self.question_token_id).int(), dim=-1)
             masked_positions = masked_position_for_each_example.unsqueeze(-1)
             mask_positions_were_none = True
 
@@ -151,5 +155,3 @@ class ModelWithQASSHead(BertPreTrainedModel):
             outputs = (total_loss,) + outputs
 
         return outputs
-
-
