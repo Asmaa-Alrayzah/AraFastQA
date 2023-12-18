@@ -45,7 +45,6 @@ If you use this work in your research, please cite it using the following BibTeX
 }
 ```
 
-## Contact
-
-For any further inquiries, you can reach me at asalrayzah@gmail.com
+## Bugs or questions?
+If you have any questions about the code or the paper, please email Asmaa ( asalrayzah@nu.edu.sa). You can open an issue if you encounter any problems when using the code or want to report a bug. Please try to specify the problem with details so we can help you better and quicker!
 
