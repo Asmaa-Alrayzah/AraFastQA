@@ -22,14 +22,20 @@ Or, you can install it directly using the following command:
 
 `!pip install torch==1.7.1 transformers==2.9.0  tokenizers==0.7.0 tensorboardX`
 
-Just so you know, if you want to reproduce results from the paper or run with a QASS head in general, questions need to be augmented with a [QUESTION] token  To do so, please run the following command:
+Just so you know, if you want to reproduce results from the paper or run with a QASS head in general, questions need to be augmented with a [QUESTION] token <br>  To do so, please run the following command:
 
 `!python qass_preprocess.py --path "../datasets /*"`
 
 This will add a [MASK] token to each question in the training data, which will later be replaced by a [QUESTION] token automatically by the QASS layer implementation.
 
-## Datasets in MRQA structure
-Download the Arabic QA benchmark datasets (TyDi QA and ARCD) from the following command;
+Note: <br> 
+You can download the Arabic QA benchmark datasets (TyDi QA and ARCD) with the QASS layer directly (without  needing to run qass_preprocess.py) from the following command:
+
+`!gdown --id 1k9t8tVFt1Ix1qnUoumKCqNR_kl794ad2 --folder`
+
+
+## Datasets in MRQA structure without QASS layer
+Download the Arabic QA benchmark datasets (TyDi QA and ARCD) from the following command:
 
 `!gdown --id 1QfBeyK8sXhl_5AxAzezkQv-Qmln3Fvad --folder`
 
