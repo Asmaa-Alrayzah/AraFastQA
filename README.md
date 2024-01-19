@@ -37,7 +37,7 @@ You can download the Arabic QA benchmark datasets (TyDi QA and ARCD) with the QA
 ## Datasets in MRQA structure without QASS layer
 Download the Arabic QA benchmark datasets (TyDi QA and ARCD) from the following command:
 
-`!gdown --id 1QfBeyK8sXhl_5AxAzezkQv-Qmln3Fvad --folder`
+`!gdown --id 1-uXPl2bpY2ak-b5vSNJFK8XbonjEaRdQ --folder`
 
 ## Python version
 Using the 8.3 version of Python to run the model is preferable. You can downgrade the Python version using the following commands:
