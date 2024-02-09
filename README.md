@@ -31,7 +31,7 @@ This will add a [MASK] token to each question in the training data, which will l
 Note: <br> 
 You can download the Arabic QA benchmark datasets (TyDi QA and ARCD) with the QASS layer directly (without  needing to run qass_preprocess.py) from the following command:
 
-`!gdown --id 1k9t8tVFt1Ix1qnUoumKCqNR_kl794ad2 --folder`
+`!gdown --id 15t9ClxZNQsFkdFxv9uxKLCiVVx67PhLU --folder`
 
 
 ## Datasets in MRQA structure without QASS layer
