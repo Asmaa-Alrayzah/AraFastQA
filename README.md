@@ -50,26 +50,28 @@ Using the 8.3 version of Python to run the model is preferable. You can downgrad
 
 # AraFastQA-base Performance
 
-This table presents the final F1 and Exact Match (EM) scores for the AraFastQA-base model across different "shots" of training data for the ARCD and TyDi QA datasets.
+This table presents the final F1 and EM scores for the AraFastQA-base model across different "shots" of training data for the ARCD and TyDi QA datasets.<br>
+NOTE: The following results are introduced by conducting fine-tuning based on FSL of this experiment on High Performance Computing (HPC) known as Aziz Supercomputer. 
 
 | Shots    | Measure | ARCD  | TyDi QA |
 |----------|---------|-------|---------|
-| 16 shot  | F1      | 21.58 | 27.22   |
-|          | EM      | 6.66  | 13.73   |
-| 32 shot  | F1      | 29.33 | 32.37   |
-|          | EM      | 5.33  | 16.90   |
-| 64 shot  | F1      | 31.63 | 37.05   |
-|          | EM      | 7.33  | 20.54   |
-| 128 shot | F1      | 32.45 | 49.03   |
-|          | EM      | 7.33  | 27.14   |
+| 16 shot  | F1      | 22.99 | 27.22   |
+|          | EM      | 6.8   | 13.73   |
+| 32 shot  | F1      | 29.15 | 32.37   |
+|          | EM      | 6.22  | 16.9    |
+| 64 shot  | F1      | 35.44 | 37.05   |
+|          | EM      | 7.7   | 20.54   |
+| 128 shot | F1      | 39.14 | 49.03   |
+|          | EM      | 8.66  | 27.14   |
 | 256 shot | F1      | 41.59 | 65.06   |
 |          | EM      | 10.33 | 43.86   |
 | 512 shot | F1      | 46.05 | 69.51   |
 |          | EM      | 11.66 | 49.83   |
-| 1024 shot| F1      | 53.25 | 73.74   |
-|          | EM      | 16    | 53.63   |
+| 1024 shot| F1      | 54.29 | 74.51   |
+|          | EM      | 16.47 | 55.91   |
 | Full shot| F1      | 73.45 | 84.04   |
 |          | EM      | 59.33 | 68.4    |
+
 
 ## Citation
 If you use this work in your research, please cite it using the following BibTeX entry:
